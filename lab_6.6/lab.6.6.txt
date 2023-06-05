@@ -1,0 +1,83 @@
+public class One {
+    int value;
+
+    public One(int value) {
+        this.value = value;
+    }
+
+    // Перевизначений метод з параметром типу double
+    public void overriddenMethod(double parameter) {
+        System.out.println("Overridden method in class One");
+        System.out.println("Parameter: " + parameter);
+        System.out.println("Value: " + value);
+    }
+
+    // Статичний метод з динамічною логікою
+    public static void staticMethod(int parameter) {
+        System.out.println("Static method in class One");
+        System.out.println("Parameter: " + parameter);
+        System.out.println("This is class One");
+    }
+}
+
+public class Two {
+    double value;
+
+    public Two(double value) {
+        this.value = value;
+    }
+
+    // Перевизначений метод з параметром типу int
+    public void overriddenMethod(int parameter) {
+        System.out.println("Overridden method in class Two");
+        System.out.println("Parameter: " + parameter);
+        System.out.println("Value: " + value);
+    }
+
+    // Статичний метод з динамічною логікою
+    public static void staticMethod(int parameter) {
+        System.out.println("Static method in class Two");
+        System.out.println("Parameter: " + parameter);
+        System.out.println("This is class Two");
+    }
+}
+
+public class Three {
+    String value;
+
+    public Three(String value) {
+        this.value = value;
+    }
+
+    // Перевизначений метод з параметром типу boolean
+    public void overriddenMethod(boolean parameter) {
+        System.out.println("Overridden method in class Three");
+        System.out.println("Parameter: " + parameter);
+        System.out.println("Value: " + value);
+    }
+
+    // Статичний метод з динамічною логікою
+    public static void staticMethod(int parameter) {
+        System.out.println("Static method in class Three");
+        System.out.println("Parameter: " + parameter);
+        System.out.println("This is class Three");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        One one = new One(10);
+        Two two = new Two(3.14);
+        Three three = new Three("Test");
+
+        // Виклик перевизначених методів
+        one.overriddenMethod(2.5);
+        two.overriddenMethod(5);
+        three.overriddenMethod(true);
+
+        // Виклик статичних методів
+        One.staticMethod(1);
+        Two.staticMethod(2);
+        Three.staticMethod(3);
+    }
+}
